@@ -33,7 +33,8 @@ class MainActivity : ComponentActivity() {
       )
 
       // If we remove CrossfadeTransition, the placeholder stops affecting the scale, though.
-      // And if we use placeholder (instead of placeholder_larger), scaling isn't affected even with crossfade.
+      // And if we use placeholder, placeholder_smaller, or placeholder_larger_same_aspect_ratio,
+      // scaling isn't affected even with crossfade.
     }
   }
 }
