@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     Coil.setImageLoader(
       ImageLoader.Builder(this)
-        // When we have the CrossfadeTransition here...
+        // When we have the coil.transition.CrossfadeTransition here...
         .transitionFactory(CrossfadeTransition.Factory())
         .build()
     )
@@ -35,6 +35,9 @@ class MainActivity : ComponentActivity() {
       // If we remove CrossfadeTransition, the placeholder stops affecting the scale, though.
       // And if we use placeholder, placeholder_smaller, or placeholder_larger_same_aspect_ratio,
       // scaling isn't affected even with crossfade.
+
+      // Also issue is gone if we use a copy of coil.transition.CrossfadeTransition
+      // (i.e. com.fredporciuncula.coil.crossfade.CrossfadeTransition)
     }
   }
 }
